@@ -59,30 +59,26 @@ function select(obj) {
 
 // Total Player Cost
 document.getElementById("player-cost-btn").addEventListener("click", function () {
-    const perPlayerCost = document.getElementById("per-player");
+    const perPlayerCost = cost("per-player");
     const listContainer = document.getElementById("list-container");
-    if (perPlayerCost.value == "") {
-        alert("Please Input Price");
-    } else if (listContainer.innerHTML == "") {
+    if (listContainer.innerHTML == "") {
         alert("Please Add Player First");
     } else {
         const listItem = document.getElementsByClassName("list-decimal");
-        const totalPlayerCost = parseInt(perPlayerCost.value) * listItem.length;
+        const totalPlayerCost = perPlayerCost * listItem.length;
         document.getElementById("total-player-cost").innerText = totalPlayerCost;
     }
 });
 
 // Total Cost
 document.getElementById("total-cost-btn").addEventListener("click", function () {
-    const managerCost = document.getElementById("manager");
-    const coachCost = document.getElementById("coach");
+    const managerCost = cost("manager");
+    const coachCost = cost("coach");
     const totalPlayerCost = parseInt(document.getElementById("total-player-cost").innerText);
-    if (managerCost.value == "" || coachCost.value == "") {
-        alert("Please Input Manager Or Coach Price");
-    } else if (totalPlayerCost == 0) {
+    if (totalPlayerCost == 0) {
         alert("Please First Calculate Total Player Cost");
     } else {
-        let totalCost = parseInt(managerCost.value) + parseInt(coachCost.value) + totalPlayerCost;
+        let totalCost = managerCost + coachCost + totalPlayerCost;
         document.getElementById("total-cost").innerText = totalCost;
     }
 });
