@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!-- TailwindCSS Linked  -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- TailwindCSS Custom Style -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    screens: {
+                        xs: "480px",
+                        sm: "768px",
+                        md: "1024px",
+                        lg: "1280px",
+                        xl: "1600px",
+                    },
+                    extend: {
+                        colors: {
+                            accent: "#0F3D3E",
+                            accentText: "#FF5E19",
+                            dark: "#100F0F",
+                            darkGray: "#151515",
+                            light: "#F1F1F1",
+                        },
+                        fontFamily: {
+                            bodyFont: ["Berkshire Swash", "cursive"],
+                        },
+                    },
+                    fontFamily: {
+                        sans: ["Poppins", "sans-serif"],
+                    },
+                },
+            };
+        </script>
+
+        <!-- Reusable Custom TailwindCSS components -->
+        <style type="text/tailwindcss">
+            @layer components {
+                .btn {
+                    @apply px-4 py-2 font-semibold rounded-lg;
+                }
+                .btn-primary {
+                    @apply border border-accent bg-accent text-light hover:bg-light hover:text-accent;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- JavaScript Linked -->
+        <script src="scripts.js"></script>
+    </body>
+</html>
