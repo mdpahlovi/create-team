@@ -44,7 +44,7 @@ function select(obj) {
         const li = document.createElement("li");
         li.classList.add("list-decimal");
         li.innerHTML = `
-        <h3 class="text-xl font-semibold">${obj.name}</h3>`;
+        <h3 class="font-semibold">${obj.name}</h3>`;
         listContainer.appendChild(li);
 
         // Button Disabled
@@ -56,3 +56,15 @@ function select(obj) {
         alert("You All Ready Select 5 Player");
     }
 }
+
+// Total Player Cost
+document.getElementById("player-cost-btn").addEventListener("click", function () {
+    const perPlayerCost = document.getElementById("per-player");
+    if (perPlayerCost.value != "") {
+        const listItem = document.getElementsByClassName("list-decimal");
+        const totalPlayerCost = parseInt(perPlayerCost.value) * listItem.length;
+        document.getElementById("total-player-cost").innerText = totalPlayerCost;
+    } else {
+        alert("Please Input Price");
+    }
+});
