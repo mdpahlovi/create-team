@@ -81,6 +81,8 @@ document.getElementById("total-cost-btn").addEventListener("click", function () 
         alert("Please First Calculate Total Player Cost");
     } else {
         let totalCost = managerCost + coachCost + totalPlayerCost;
-        document.getElementById("total-cost").innerText = totalCost;
+        if (managerCost != 0 || coachCost != 0) {
+            document.getElementById("total-cost").innerText = totalCost;
+        }
     }
 });
