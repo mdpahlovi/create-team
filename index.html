@@ -56,8 +56,8 @@
         <header>
             <div class="px-6 relative bg-dark w-full h-[40rem] flex flex-col gap-6 justify-center items-center">
                 <img class="absolute left-0 bottom-0" src="img/bg-item01.png" alt="" />
-                <img class="absolute right-0 bottom-0" src="img/bg-item02.png" alt="" />
-                <h1 class="text-6xl text-center font-bold text-accentText font-bodyFont">Create Your Best Team</h1>
+                <img class="hidden sm:block absolute right-0 bottom-0" src="img/bg-item02.png" alt="" />
+                <h1 class="text-6xl text-center font-bold text-accentText font-bodyFont z-10">Create Your Best Team</h1>
                 <p class="max-w-xl text-center text-light">
                     Welcome to our site. Here you can select your favorite player buy them at a reasonable price. You
                     can also use them in our game PES. you can also buy manager and coach. Create favorite Team right
@@ -72,8 +72,11 @@
         <!-- Mann Section -->
         <main class="bg-darkGray">
             <div class="container mx-auto px-6">
-                <div class="flex gap-6">
-                    <div id="playerCardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <div
+                        id="playerCardContainer"
+                        class="flex flex-wrap justify-center xs:grid xs:grid-cols-2 lg:grid-cols-3 gap-6"
+                    ></div>
                     <div class="flex flex-col gap-6">
                         <div class="p-6 bg-dark rounded">
                             <h2 class="text-4xl font-bold text-accentText">Selected Player</h2>

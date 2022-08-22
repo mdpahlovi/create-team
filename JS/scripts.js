@@ -66,7 +66,9 @@ document.getElementById("player-cost-btn").addEventListener("click", function ()
     } else {
         const listItem = document.getElementsByClassName("list-decimal");
         const totalPlayerCost = perPlayerCost * listItem.length;
-        document.getElementById("total-player-cost").innerText = totalPlayerCost;
+        if (totalPlayerCost != 0) {
+            document.getElementById("total-player-cost").innerText = totalPlayerCost;
+        }
     }
 });
 
