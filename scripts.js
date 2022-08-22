@@ -68,3 +68,18 @@ document.getElementById("player-cost-btn").addEventListener("click", function ()
         alert("Please Input Price");
     }
 });
+
+// Total Cost
+document.getElementById("total-cost-btn").addEventListener("click", function () {
+    const managerCost = document.getElementById("manager");
+    const coachCost = document.getElementById("coach");
+    const totalPlayerCost = parseInt(document.getElementById("total-player-cost").innerText);
+    if (managerCost.value == "" || coachCost.value == "") {
+        alert("Please Input Manager Or Coach Price");
+    } else if (totalPlayerCost == 0) {
+        alert("Please First Calculate Total Player Cost");
+    } else {
+        let totalCost = parseInt(managerCost.value) + parseInt(coachCost.value) + totalPlayerCost;
+        document.getElementById("total-cost").innerText = totalCost;
+    }
+});
