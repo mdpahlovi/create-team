@@ -35,3 +35,24 @@ function displayAllCard(arr) {
 
 // Player Object Array Called
 displayAllCard(playerArray);
+
+// Clicked Add & Disabled li
+function select(obj) {
+    const listItem = document.getElementsByClassName("list-decimal");
+    if (listItem.length < 5) {
+        const listContainer = document.getElementById("list-container");
+        const li = document.createElement("li");
+        li.classList.add("list-decimal");
+        li.innerHTML = `
+        <h3 class="text-xl font-semibold">${obj.name}</h3>`;
+        listContainer.appendChild(li);
+
+        // Button Disabled
+        const selectBtn = document.getElementById(obj.name);
+        selectBtn.style.pointerEvents = "none";
+        selectBtn.style.backgroundColor = "#F1F1F1";
+        selectBtn.style.color = "#0F3D3E";
+    } else {
+        alert("You All Ready Select 5 Player");
+    }
+}
