@@ -69,6 +69,53 @@
         <!-- Section Gap -->
         <div class="p-12 bg-darkGray"></div>
 
+        <!-- Mann Section -->
+        <main class="bg-darkGray">
+            <div class="container mx-auto px-6">
+                <div class="flex gap-6">
+                    <div id="playerCardContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                    <div class="flex flex-col gap-6">
+                        <div class="p-6 bg-dark rounded">
+                            <h2 class="text-4xl font-bold text-accentText">Selected Player</h2>
+                            <ol
+                                id="list-container"
+                                class="px-6 pt-6 pb-2 text-light text-center flex flex-col justify-center gap-2"
+                            ></ol>
+                        </div>
+                        <div class="p-6 bg-dark rounded text-light flex flex-col gap-6">
+                            <h2 class="text-4xl font-bold text-accentText">Budget</h2>
+                            <div class="flex justify-between">
+                                <label for="per-player">Per Player</label>
+                                <input
+                                    id="per-player"
+                                    class="w-2/4 bg-transparent px-1 border rounded-lg"
+                                    type="number"
+                                />
+                            </div>
+                            <button id="player-cost-btn" class="btn btn-primary">Calculate</button>
+                            <div class="flex justify-between">
+                                <p>Player Expenses</p>
+                                <p class="text-accentText">$<span id="total-player-cost">00</span></p>
+                            </div>
+                            <div class="flex justify-between">
+                                <label for="manager">Manager</label>
+                                <input id="manager" class="w-2/4 bg-transparent px-1 border rounded-lg" type="number" />
+                            </div>
+                            <div class="flex justify-between">
+                                <label for="coach">Coach</label>
+                                <input id="coach" class="w-2/4 bg-transparent px-1 border rounded-lg" type="number" />
+                            </div>
+                            <button class="btn btn-primary" id="total-cost-btn">Calculate Total</button>
+                            <div class="flex justify-between">
+                                <p>Total</p>
+                                <p class="text-accentText">$<span id="total-cost">00</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
         <!-- JavaScript Linked -->
         <script src="scripts.js"></script>
     </body>
