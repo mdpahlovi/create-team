@@ -60,12 +60,15 @@ function select(obj) {
 // Total Player Cost
 document.getElementById("player-cost-btn").addEventListener("click", function () {
     const perPlayerCost = document.getElementById("per-player");
-    if (perPlayerCost.value != "") {
+    const listContainer = document.getElementById("list-container");
+    if (perPlayerCost.value == "") {
+        alert("Please Input Price");
+    } else if (listContainer.innerHTML == "") {
+        alert("Please Add Player First");
+    } else {
         const listItem = document.getElementsByClassName("list-decimal");
         const totalPlayerCost = parseInt(perPlayerCost.value) * listItem.length;
         document.getElementById("total-player-cost").innerText = totalPlayerCost;
-    } else {
-        alert("Please Input Price");
     }
 });
 
