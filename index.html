@@ -54,11 +54,13 @@
     <body>
         <!-- Hero Section -->
         <header>
-            <div class="px-6 relative bg-dark w-full h-[40rem] flex flex-col gap-6 justify-center items-center">
+            <div class="px-6 relative bg-dark w-full h-[39rem] flex flex-col gap-6 justify-center items-center">
                 <img class="absolute left-0 bottom-0" src="img/bg-item01.png" alt="" />
                 <img class="hidden sm:block absolute right-0 bottom-0" src="img/bg-item02.png" alt="" />
-                <h1 class="text-6xl text-center font-bold text-accentText font-bodyFont z-10">Create Your Best Team</h1>
-                <p class="max-w-xl text-center text-light">
+                <h1 class="text-5xl xs:text-6xl text-center font-bold text-accentText font-bodyFont z-10">
+                    Create Your Best Team
+                </h1>
+                <p class="max-w-xl overflow-ellipsis text-center text-light">
                     Welcome to our site. Here you can select your favorite player buy them at a reasonable price. You
                     can also use them in our game PES. you can also buy manager and coach. Create favorite Team right
                     now.
@@ -72,11 +74,8 @@
         <!-- Mann Section -->
         <main class="bg-darkGray">
             <div class="container mx-auto px-6">
-                <div class="flex flex-col sm:flex-row gap-6">
-                    <div
-                        id="playerCardContainer"
-                        class="flex flex-wrap justify-center xs:grid xs:grid-cols-2 lg:grid-cols-3 gap-6"
-                    ></div>
+                <div class="grid grid-cols-1 sm:grid-cols-[2fr_1fr] lg:grid-cols-[auto_auto] gap-6">
+                    <div id="playerCardContainer" class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6"></div>
                     <div class="flex flex-col gap-6">
                         <div class="p-6 bg-dark rounded">
                             <h2 class="text-4xl font-bold text-accentText">Selected Player</h2>
@@ -87,31 +86,41 @@
                         </div>
                         <div class="p-6 bg-dark rounded text-light flex flex-col gap-6">
                             <h2 class="text-4xl font-bold text-accentText">Budget</h2>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between items-center">
                                 <label for="per-player">Per Player</label>
                                 <input
                                     id="per-player"
-                                    class="w-2/4 bg-transparent px-1 border rounded-lg"
+                                    class="w-3/5 bg-transparent px-2 py-2 border rounded-lg"
                                     type="number"
                                 />
                             </div>
                             <button id="player-cost-btn" class="btn btn-primary">Calculate</button>
                             <div class="flex justify-between">
-                                <p>Player Expenses</p>
-                                <p class="text-accentText">$<span id="total-player-cost">00</span></p>
+                                <p class="text-xl font-medium">Player Cost</p>
+                                <p class="text-accentText text-xl font-medium">
+                                    $<span id="total-player-cost">00</span>
+                                </p>
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between items-center">
                                 <label for="manager">Manager</label>
-                                <input id="manager" class="w-2/4 bg-transparent px-1 border rounded-lg" type="number" />
+                                <input
+                                    id="manager"
+                                    class="w-3/5 bg-transparent px-2 py-2 border rounded-lg"
+                                    type="number"
+                                />
                             </div>
-                            <div class="flex justify-between">
+                            <div class="flex justify-between items-center">
                                 <label for="coach">Coach</label>
-                                <input id="coach" class="w-2/4 bg-transparent px-1 border rounded-lg" type="number" />
+                                <input
+                                    id="coach"
+                                    class="w-3/5 bg-transparent px-2 py-2 border rounded-lg"
+                                    type="number"
+                                />
                             </div>
                             <button class="btn btn-primary" id="total-cost-btn">Calculate Total</button>
                             <div class="flex justify-between">
-                                <p>Total</p>
-                                <p class="text-accentText">$<span id="total-cost">00</span></p>
+                                <p class="text-xl font-medium">Total</p>
+                                <p class="text-accentText text-xl font-medium">$<span id="total-cost">00</span></p>
                             </div>
                         </div>
                     </div>
